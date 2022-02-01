@@ -35,7 +35,7 @@ StarterGui:SetCore('SendNotification', {
 });
 
 local function TestKey()
-    local EndPoint = string.format('https://translate.yandex.net/api/v1.5/tr.json/detect?key=%s&text=%s', k or ClientKey, 'hello');
+    local EndPoint = string.format('https://translate.yandex.net/api/v1.5/tr.json/detect?key=%s&text=%s', ClientKey, 'hello');
     local Res = Request(EndPoint);
     return Res.code == 200;
 end;
