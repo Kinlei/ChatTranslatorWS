@@ -26,12 +26,6 @@ local function Request(u, m, h)
     WebSocket:Send(HttpService:JSONEncode({url=u,method=m,headers=h}));
     local Response = WebSocket.OnMessage:Wait();
     return HttpService:JSONDecode(Response);
-    -- local Response = syn.request({
-    --     Url = u,
-    --     method = m or 'GET',
-    --     headers = h or {}
-    -- });
-    -- return HttpService:JSONDecode(Response.Body);
 end;
 
 StarterGui:SetCore('SendNotification', {
